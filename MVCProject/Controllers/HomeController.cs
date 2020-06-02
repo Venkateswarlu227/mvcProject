@@ -8,23 +8,21 @@ namespace MVCProject.Controllers
 {
     public class HomeController : Controller
     {
-        public ActionResult Index()
+        public ViewResult Index()
         {
-            return View();
-        }
+            // GET: Home
+            ViewBag.countries = new List<string>
+            {
 
-        public ActionResult About()
-        {
-            ViewBag.Message = "Your application description page.";
 
-            return View();
-        }
 
-        public ActionResult Contact()
-        {
-            ViewBag.Message = "Your contact page.";
+                "indai",
+                "usa",
+                "UK",
+                "Canada"
+            };
 
-            return View();
+            return View("Index");
         }
     }
 }
